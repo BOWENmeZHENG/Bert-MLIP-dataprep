@@ -14,4 +14,7 @@ def annotate(para):
     for word in word_list:
         c = input(f"What's the category for '{word}'? ")
         categories.append(c)
+        if word == '.':
+            print()
+            print(para)
     return word_list, categories
