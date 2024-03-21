@@ -2,5 +2,5 @@
 
 # ./github.sh to push to GitHub
 git status
-git commit -a -m "annotate, same each individual record"
+git commit -a -m "interactive annotation"
 git push -u origin main
