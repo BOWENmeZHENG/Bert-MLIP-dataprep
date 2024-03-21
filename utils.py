@@ -3,6 +3,9 @@ import re
 def split_para(para):
     return re.findall(r"[\w']+|[-.,!?;\(\)\[\]]", para)
 
+def to_dict(word_list, categories):
+    return {"words": word_list, "ner": categories}
+
 def annotate(para):
     print(para)
     word_list = split_para(para)
