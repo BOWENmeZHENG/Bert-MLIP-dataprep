@@ -12,14 +12,14 @@ def split_para(para):
 def to_dict(word_list, categories):
     return {"words": word_list, "ner": categories}
 
-def annotate(para, name=None):
+def annotate(para, class_list, name=None):
     print(para)
     word_list = split_para(para)
     categories = []
     
     for i, word in enumerate(word_list):
         c = input(f"What's the category for '{word}'? ")
-        categories.append(c)
+        categories.append(class_list[c])
         if (i + 1) % 10 == 0:
             print()
             print(' '.join(word_list[i:]))
