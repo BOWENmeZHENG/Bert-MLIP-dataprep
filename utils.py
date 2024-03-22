@@ -19,7 +19,10 @@ def annotate(para, class_list, name=None):
     
     for i, word in enumerate(word_list):
         c = input(f"What's the category for '{word}'? ")
-        categories.append(class_list[c])
+        try:
+            categories.append(class_list[int(c)])
+        except:
+            c = input(f"What's the category for '{word}'? ")
         if (i + 1) % 10 == 0:
             print()
             print(' '.join(word_list[i:]))
